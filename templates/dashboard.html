@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Dashboard</title>
+
+<link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark px-4">
+
+<img src="{{ url_for('static', filename='images/logo.png') }}" width="40">
+
+<span class="navbar-brand ms-2">
+CCS Sit-In Monitoring System
+</span>
+
+<div class="ms-auto">
+
+<span class="text-white me-3">
+Welcome {{user.first_name}}
+</span>
+
+<a href="/logout" class="btn btn-warning btn-sm">
+Logout
+</a>
+
+</div>
+
+</nav>
+
+<div class="container mt-5">
+
+<h2 class="mb-4">Student Dashboard</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="card dashboard-card">
+
+<div class="card-body">
+
+<h5>Student ID</h5>
+<p>{{user.student_id}}</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="card dashboard-card">
+
+<div class="card-body">
+
+<h5>Course</h5>
+<p>{{user.course}}</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="card dashboard-card">
+
+<div class="card-body">
+
+<h5>Year Level</h5>
+<p>{{user.course_level}}</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
